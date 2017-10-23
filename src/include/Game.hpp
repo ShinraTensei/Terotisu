@@ -8,13 +8,13 @@ class Game
 {
 private:
     SDL_Window *WinPtr;
-    SDL_Renderer *RenPtr;
     int Width;
     int Height;
     std::string Title;
 
     void handle_error(bool result);
 public:
+    SDL_Renderer *RenPtr;
     Game(int _Width, int _Height, std::string _Title);
     bool Run();
     void Update();
