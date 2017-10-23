@@ -27,7 +27,7 @@ bool Game::Run()
         }
     }
     //Clear screen
-    SDL_SetRenderDrawColor(RenPtr, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(RenPtr, 111, 111, 111, 255);
     SDL_RenderClear(RenPtr);
     return true;
 }
