@@ -5,6 +5,7 @@ Game::Game(int _Width, int _Height, std::string _Title)
     Width = _Width;
     Height = _Height;
     Title = _Title;
+    KeyState = SDL_GetKeyboardState(nullptr);
 
     //Create Window
     WinPtr = SDL_CreateWindow(Title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, Width, Height, SDL_WINDOW_SHOWN);
@@ -25,6 +26,7 @@ bool Game::Run()
             break;
             default:;
         }
+        if(KeyState[SDL_SCANCODE_ESCAPE]){return false;}
     }
     //Clear screen
     SDL_SetRenderDrawColor(RenPtr, 111, 111, 111, 255);

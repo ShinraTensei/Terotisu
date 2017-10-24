@@ -13,6 +13,7 @@ private:
     std::string Title;
 
     void handle_error(bool result);
+    const Uint8 *KeyState;
 public:
     SDL_Renderer *RenPtr;
     Game(int _Width, int _Height, std::string _Title);
