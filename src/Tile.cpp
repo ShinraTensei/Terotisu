@@ -18,6 +18,8 @@ void Tile::SetTexture(SDL_Texture *tex)
 
 void Tile::Draw(SDL_Renderer *RenPtr)
 {
+    SDL_SetRenderDrawColor(RenPtr, 255, 100, 50, 255);
+    SDL_RenderFillRect(RenPtr, &bounds);
     SDL_RenderCopy(RenPtr, texture, nullptr, &bounds);
 }
 
